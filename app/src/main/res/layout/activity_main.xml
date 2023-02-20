@@ -27,8 +27,13 @@
         <Button
             android:layout_width="100dp"
             android:layout_height="40dp"
-            android:text="exo player"
+            android:text="picaso"
             android:id="@+id/button3"/>
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:text="exo player"
+            android:id="@+id/button4"/>
     </LinearLayout>
 
 </FrameLayout>

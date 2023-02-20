@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         val button1 = findViewById<Button>(R.id.button1)
         val button2 = findViewById<Button>(R.id.button2)
         val button3 = findViewById<Button>(R.id.button3)
+        val button4 = findViewById<Button>(R.id.button4)
 
         button1.setOnClickListener {
             toGlide()
@@ -31,7 +32,22 @@ class MainActivity : AppCompatActivity() {
         }
 
         button3.setOnClickListener {
+            toPicasso()
+        }
+
+        button4.setOnClickListener {
             toExoPlayer()
+        }
+    }
+
+    private fun toPicasso(){
+        fragment = ImageFragment()
+        fragment?.let {
+            supportFragmentManager.beginTransaction().replace(R.id.frameLayout, it.apply {
+                arguments = Bundle().apply {
+                    putString(ImageFragment.IMAGE_LOADER, ImageFragment.PICASO)
+                }
+            }).commit()
         }
     }
 
@@ -40,7 +56,7 @@ class MainActivity : AppCompatActivity() {
         fragment?.let {
             supportFragmentManager.beginTransaction().replace(R.id.frameLayout, it.apply {
                 arguments = Bundle().apply {
-                    putBoolean(ImageFragment.IMAGE_LOADER, false)
+                    putString(ImageFragment.IMAGE_LOADER, ImageFragment.GLIDE)
                 }
             }).commit()
         }
@@ -51,7 +67,7 @@ class MainActivity : AppCompatActivity() {
         fragment?.let {
             supportFragmentManager.beginTransaction().replace(R.id.frameLayout, it.apply {
                 arguments = Bundle().apply {
-                    putBoolean(ImageFragment.IMAGE_LOADER, true)
+                    putString(ImageFragment.IMAGE_LOADER, ImageFragment.FRESCO)
                 }
             }).commit()
         }

@@ -53,4 +53,8 @@ dependencies {
     def exoplayer_version = '2.17.1'
     implementation "com.google.android.exoplayer:exoplayer-core:$exoplayer_version"
     implementation "com.google.android.exoplayer:exoplayer-ui:$exoplayer_version"
+
+    // Picaso
+    def picaso_version = '2.71828'
+    implementation "com.squareup.picasso:picasso:$picaso_version"
 }
