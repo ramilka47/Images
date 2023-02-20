@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/purple_200"
+    android:id="@+id/frameLayout">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:text="glide image"
+            android:id="@+id/button1"/>
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:text="fresco image"
+            android:id="@+id/button2"/>
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:text="exo player"
+            android:id="@+id/button3"/>
+    </LinearLayout>
+
+</FrameLayout>
